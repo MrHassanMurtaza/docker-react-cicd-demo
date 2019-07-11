@@ -6,4 +6,4 @@ before_install:
   - docker build -t mrhassanmurtaza/docker-react-cicd-demo -f Dockerfile.dev .
 
 script: 
-  - docker run mrhassanmurtaza/docker-react-cicd-demo npm run test -- --coverage
+  - docker run -e CI=true mrhassanmurtaza/docker-react-cicd-demo npm run test
